@@ -23,6 +23,7 @@ public class EngineMockController {
     @Autowired
     EngineMock engine;
 
+
     @GetMapping(value = "/temps")
     public List<Double> getAllTemperatures() {
        return engine.getTemps();
