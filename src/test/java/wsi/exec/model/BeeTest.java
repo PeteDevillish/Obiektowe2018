@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
+import java.awt.*;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(JUnit4.class)
@@ -53,7 +55,19 @@ public class BeeTest {
     @Test
     public void cantExceedFoodCapacity() {
         testee.setFood(110);
-        assertThat(testee.getFood()).isEqualTo(100);
+
+
+            assertThat(testee.getFood()).isEqualTo(testee.getCapacity());
+            System.out.println("Here, I am");
+        //System.out.println(testee.getFood());
+
     }
+    @Test
+    public void foodSetterWorksWhenFoodIsLessThanCapacity(){
+        testee.setFood(20);
+        assertThat(testee.getFood()).isEqualTo(20);
+
+    }
+
 
 }

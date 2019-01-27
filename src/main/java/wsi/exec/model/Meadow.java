@@ -35,7 +35,7 @@ public class Meadow implements BeePlace {
     }
 
     @Override
-    public void beeLeaves(Bee b) {
+    public void beeLeaves(Bee b) {bees.remove(b);
 
     }
 

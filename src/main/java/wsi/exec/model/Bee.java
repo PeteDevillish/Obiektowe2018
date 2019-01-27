@@ -9,15 +9,21 @@ public class Bee {
     private int food;
     private BeePlace location;
 
+    //konstruktor ustawiający początkowe wartości pszczoły
     public Bee() {
-        //tworzenie domyślnej pszczoły
         strength = 50;
         capacity = 50;
         food = 0;
     }
 
+    // konstruktor ustawiający sile i pilnujący by suma sily i pojemnosci byla rowna 100
+
     public void setStrength(int strength) {
+        if (strength<0) strength = 0;
+        if (strength>100) strength = 100;
         this.strength = strength;
+        this.capacity = 100 - this.strength;
+
     }
 
     public void setCapacity(int capacity) {
@@ -28,7 +34,12 @@ public class Bee {
     }
 
     public void setFood(int food) {
+        if (food<0) food = 0;
+        if (food>100) food = 100;
+        if(food>capacity) food = capacity;
         this.food = food;
+
+
     }
 
     public boolean validate() {
