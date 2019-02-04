@@ -7,7 +7,9 @@ import java.util.List;
 public class WanderingBee extends Bee {
 
     @Override
+    // funckja otrzymuje na wejsciu obecne miejsce otrzymuje na wyjscu inne miejsce
     public Place preferredMove(Place current) {
+        //porownanie
         Place next =  selectDifferent(current, current.getNearbyPlaces());
         this.setCanMove(false);
         return next;
