@@ -10,7 +10,7 @@ import java.util.Map;
 
 //szuka miejsca w ktorym jest najwiecej pszczol
 public class SocialBee extends WanderingBee{
-    
+
     @Override
     public Place preferredMove(Place current){
 
@@ -21,7 +21,7 @@ public class SocialBee extends WanderingBee{
     }
 
 
-    public Place theMostBees (Place current, List<Place> candidates){
+    protected Place theMostBees (Place current, List<Place> candidates){
         int howManyBees;
         Map<Place, Integer> counter = new HashMap<>();
 
