@@ -13,6 +13,14 @@ public class DebugScoutBee extends ScoutBee {
         ///tutaj dopisać kod wypisujący na ekran coś w stylu:
         ///  bee: (id); has visited ... places so far
         /// liczba odwiedzonych miejsc to: visited.size();
+
+
+        System.out.println("Bee " + getId()  + " has visited " + visited.size()+ " " + placeOrPlaces());
         return next;
+    }
+
+    public String placeOrPlaces(){
+        if (visited.size() == 1) return "place";
+        else return "places";
     }
 }
