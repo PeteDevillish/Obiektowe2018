@@ -34,11 +34,25 @@ public class Pyszne implements Vendor {
     @Override
     public Order orderProduct(String productName, String customer, int quantity) {
 
+
+        productName = Compare.compareInList(productName, products);
+
         if(getProducts().contains(productName)) {
             Order order = new Order(productName, customer, quantity);
             orders.add(order);
             return order;
         }
+
+//        else if(true){
+//            productName = Compare.compareArray(productName, products);
+//            if(productName != null){
+//                Order order = new Order(productName, customer, quantity);
+//                orders.add(order);
+//                return order;
+//            }
+//
+
+//        }
         else {
             System.out.println("Bardzo nam przykro, ale nie posiadamy jeszcze tego produktu w naszym asortymencie");
             System.out.println("Dostępne potrawy to " + getProducts());
@@ -65,8 +79,7 @@ public class Pyszne implements Vendor {
 
     // zamówienie losowego produktu
         public Order orderRandomProduct(String customer, int quantity){
-        Order randomOrder = orderProduct(randomProduct(), customer, quantity);
-        return randomOrder;
+            return orderProduct(randomProduct(), customer, quantity);
         }
 
 
