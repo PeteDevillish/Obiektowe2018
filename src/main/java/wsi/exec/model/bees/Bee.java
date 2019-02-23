@@ -1,10 +1,11 @@
 package wsi.exec.model.bees;
-
 import lombok.Data;
 import wsi.exec.model.places.Place;
 
 import java.util.UUID;
 
+
+//pmarecki.pro@gmail.com
 /**
  * głupia pszczoła... pozostaje ciągle w swoim miejscu
  *
